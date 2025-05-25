@@ -233,7 +233,7 @@ body {
 }
 .tech-slider-container img:first-child,
 .tech-slider-container img:last-child {
-  width: 375px;
+  width: 20%;
   height: 712px;
   flex-shrink: 0;
   aspect-ratio: 375/712;
@@ -242,7 +242,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 560px;
 }
 .tech-slider-container .gallary .bottom {
   display: flex;
