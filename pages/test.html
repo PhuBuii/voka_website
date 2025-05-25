@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product Section</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f7f7f7;
+      }
+
+      .products-section {
+        background: #f7f7f7;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .products-section h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+
+      .tab-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 20px;
+      }
+
+      .tab-buttons button {
+        background: none;
+        border: none;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 10px;
+        color: #999;
+      }
+
+      .tab-buttons button.active {
+        color: #000;
+        border-bottom: 2px solid #c8102e;
+      }
+
+      .tab-description {
+        max-width: 700px;
+        margin: 0 auto 40px;
+        color: #444;
+        font-size: 15px;
+      }
+
+      .swiper {
+        padding: 0 50px;
+      }
+
+      .product-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .product-card img {
+        max-width: 120px;
+        height: auto;
+        margin-bottom: 12px;
+      }
+
+      .product-card p {
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      .product-card button {
+        padding: 8px 16px;
+        background: #c8102e;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #999;
+        background: white;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .tab-panel {
+        display: none;
+      }
+
+      .tab-panel.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="products-section">
+      <h2>SẢN PHẨM</h2>
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="new">SẢN PHẨM MỚI</button>
+        <button class="tab-btn" data-tab="popular">SẢN PHẨM BÁN CHẠY</button>
+      </div>
+
+      <div id="desc-new" class="tab-description active">
+        VOKA AirCare là dòng sơn mới tích hợp công nghệ kháng khuẩn và khử mùi,
+        mang lại không gian sống sạch sẽ, an toàn cho sức khỏe...
+      </div>
+      <div id="desc-popular" class="tab-description" style="display: none">
+        Các dòng sơn bán chạy được người tiêu dùng tin chọn nhờ độ bền, màu sắc
+        đẹp và hiệu quả kinh tế vượt trội.
+      </div>
+
+      <!-- Tab 1: New Products -->
+      <div id="tab-new" class="tab-panel active">
+        <div class="swiper new-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="product-card">
+                <img
+                  src="https://via.placeholder.com/120x140?text=SP1"
+                  alt=""
+                />
+                <p>Sơn lót kháng kiềm KOVA K-209</p>
+                <button>Liên hệ</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-card">
+                <img
+                  src="https://via.placeholder.com/120x140?text=SP2"
+                  alt=""
+                />
+                <p>Sơn chống nóng mái tôn CN-05</p>
+                <button>Liên hệ</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-card">
+                <img
+                  src="https://via.placeholder.com/120x140?text=SP3"
+                  alt=""
+                />
+                <p>Sơn nội thất kháng khuẩn AirCare</p>
+                <button>Liên hệ</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Popular Products -->
+      <div id="tab-popular" class="tab-panel">
+        <div class="swiper popular-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="product-card">
+                <img
+                  src="https://via.placeholder.com/120x140?text=SPA"
+                  alt=""
+                />
+                <p>Sơn bóng ngoại thất KOVA</p>
+                <button>Liên hệ</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-card">
+                <img
+                  src="https://via.placeholder.com/120x140?text=SPB"
+                  alt=""
+                />
+                <p>Sơn chống thấm cao cấp CN-03</p>
+                <button>Liên hệ</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-card">
+                <img
+                  src="https://via.placeholder.com/120x140?text=SPC"
+                  alt=""
+                />
+                <p>Sơn nội thất bóng mờ</p>
+                <button>Liên hệ</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const newSwiper = new Swiper(".new-swiper", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".new-swiper .swiper-button-next",
+          prevEl: ".new-swiper .swiper-button-prev",
+        },
+      });
+
+      const popularSwiper = new Swiper(".popular-swiper", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".popular-swiper .swiper-button-next",
+          prevEl: ".popular-swiper .swiper-button-prev",
+        },
+      });
+
+      // Tab logic
+      const tabButtons = document.querySelectorAll(".tab-btn");
+      const tabPanels = document.querySelectorAll(".tab-panel");
+      const tabDescs = {
+        new: document.getElementById("desc-new"),
+        popular: document.getElementById("desc-popular"),
+      };
+
+      tabButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Toggle active button
+          tabButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          // Toggle panel
+          const target = btn.dataset.tab;
+          tabPanels.forEach((p) => p.classList.remove("active"));
+          document.getElementById(`tab-${target}`).classList.add("active");
+
+          // Toggle description
+          Object.values(tabDescs).forEach(
+            (desc) => (desc.style.display = "none")
+          );
+          tabDescs[target].style.display = "block";
+        });
+      });
+    </script>
+  </body>
+</html>
