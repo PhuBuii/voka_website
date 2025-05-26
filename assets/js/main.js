@@ -2,18 +2,15 @@
 const welcomeSwiper = new Swiper(".welcome-Swiper", {
   direction: "vertical",
   slidesPerView: 1,
-  mousewheel: true,
+  loop: true,
+  mousewheel: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  loop: false,
-  on: {
-    reachEnd: () => {
-      setTimeout(() => {
-        scrollToContent();
-      }, 400);
-    },
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false,
   },
 });
 
