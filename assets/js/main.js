@@ -9,7 +9,7 @@ const welcomeSwiper = new Swiper(".welcome-Swiper", {
     clickable: true,
   },
   autoplay: {
-    delay: 1000,
+    delay: 3000,
     disableOnInteraction: false,
   },
 });
@@ -72,13 +72,13 @@ tabButtons.forEach((btn) => {
   });
 });
 const gallerySwipper = new Swiper(".gallery-swiper", {
-  slidesPerView: 2.5,
+  slidesPerView: 3,
   spaceBetween: 71,
   navigation: {
     clickable: true,
   },
   breakpoints: {
-    1024: { slidesPerView: 2.5 },
+    1024: { slidesPerView: 3 },
     768: { slidesPerView: 2 },
     480: { slidesPerView: 1 },
   },
