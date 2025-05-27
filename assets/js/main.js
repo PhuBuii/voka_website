@@ -1,4 +1,5 @@
 function initSwipers() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
   // Welcome Swiper (vertical)
   const welcomeSwiper = new Swiper(".welcome-Swiper", {
     direction: "vertical",
@@ -12,6 +13,14 @@ function initSwipers() {
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
+    },
+    on: {
+      init: function () {
+        adjustPaginationBulletsWithPercentGap(5);
+      },
+      slideChangeTransitionEnd: function () {
+        adjustPaginationBulletsWithPercentGap(5);
+      },
     },
   });
 
@@ -80,6 +89,45 @@ function initSwipers() {
     autoHeight: true,
   });
 }
+function adjustPaginationBulletsWithPercentGap(gapPercent = 5) {
+  const paginationContainer = document.querySelector(
+    ".welcome-section .swiper-pagination"
+  );
+  if (!paginationContainer) return;
+
+  const swiperSlides = document.querySelectorAll(
+    ".welcome-Swiper .swiper-slide"
+  );
+  const bulletCount = swiperSlides.length;
+  if (bulletCount === 0) return;
+
+  const paginationHeight = paginationContainer.clientHeight;
+
+  const totalGapHeight = (gapPercent / 100) * paginationHeight;
+
+  const gapPx = bulletCount > 1 ? totalGapHeight / (bulletCount - 1) : 0;
+
+  const bulletHeight = (paginationHeight - totalGapHeight) / (bulletCount + 1);
+
+  if (bulletHeight <= 0) return;
+
+  const bullets = paginationContainer.querySelectorAll(
+    ".swiper-pagination-bullet"
+  );
+  bullets.forEach((bullet, index) => {
+    bullet.style.height = `${bulletHeight}px`;
+    bullet.style.marginBottom =
+      index !== bullets.length - 1 ? `${gapPx}px` : "0";
+    bullet.style.transition = "height 0.3s ease";
+  });
+
+  const activeBullet = paginationContainer.querySelector(
+    ".swiper-pagination-bullet-active"
+  );
+  if (activeBullet) {
+    activeBullet.style.height = `${bulletHeight * 2}px`;
+  }
+}
 
 // Scroll to technology section
 function scrollToContent() {
@@ -115,4 +163,3 @@ function intiTabs() {
 
 initSwipers();
 intiTabs();
-scrollToContent();
