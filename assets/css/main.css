@@ -513,7 +513,8 @@ header {
   font-weight: 600;
   line-height: 52px;
   text-transform: uppercase;
-  margin-left: 262px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .color-trends-section .color-row {
   margin-top: 104px;

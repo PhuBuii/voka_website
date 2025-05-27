@@ -16,8 +16,12 @@
   .products-section {
     padding: 60px 16px;
   }
-  .contact-form-section .form-overlay {
+  .contact-form-section .form-overlay,
+  .color-trends-section .section-title {
     padding: 0 16px;
+  }
+  .color-box {
+    font-size: 16px;
   }
   .header-search-box.active .input-search {
     width: 100px;
@@ -53,6 +57,9 @@
   }
 }
 @media (max-width: 1200px) {
+  .color-trends-section .color-row {
+    margin-top: 50px;
+  }
   .products-section .tab-buttons {
     margin-bottom: 0;
   }
@@ -79,9 +86,13 @@
   .gallery-section h2,
   .news-section .section-title,
   .comments-section .comment-box h2,
-  .products-section .tab-buttons button {
+  .products-section .tab-buttons button,
+  .color-trends-section .section-title {
     margin-bottom: 40px;
     font-size: 28px;
+  }
+  .color-trends-section .section-title {
+    margin-bottom: 0;
   }
   .news-section .main-article .title {
     font-size: 24px;
@@ -295,6 +306,9 @@
   }
 }
 @media (max-width: 1024px) {
+  .color-box {
+    flex: 0 0 20%;
+  }
   .comments-section .image-box {
     flex: 0 0 40%;
     max-width: 40%;
@@ -341,6 +355,21 @@
   }
 }
 @media (max-width: 876px) {
+  .color-container {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 16px);
+    overflow: auto;
+    margin-left: 16px;
+  }
+  .color-trends-section .color-row {
+    margin-top: 37px;
+    flex-wrap: nowrap;
+  }
+  .color-box {
+    width: 161px;
+    height: 161px;
+  }
   .store-section {
     padding: 30px 0;
   }
@@ -510,7 +539,8 @@
   .gallery-section h2,
   .news-section .section-title,
   .comments-section .comment-box h2,
-  .products-section .tab-buttons button {
+  .products-section .tab-buttons button,
+  .color-trends-section .section-title {
     font-size: 24px;
   }
   .gallery-section {
