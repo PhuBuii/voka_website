@@ -17,7 +17,8 @@
     padding: 60px 16px;
   }
   .contact-form-section .form-overlay,
-  .color-trends-section .section-title {
+  .color-trends-section .section-title,
+  .welcome-section .content-overlay .content-container {
     padding: 0 16px;
   }
   .color-box {
@@ -41,6 +42,9 @@
   .products-section .swiper-container {
     width: 90%;
     margin-top: 45px;
+  }
+  .welcome-section .hero-desc {
+    font-size: 16px;
   }
 }
 @media (max-width: 1400px) {
@@ -87,12 +91,16 @@
   .news-section .section-title,
   .comments-section .comment-box h2,
   .products-section .tab-buttons button,
-  .color-trends-section .section-title {
+  .color-trends-section .section-title,
+  .welcome-section .hero-title {
     margin-bottom: 40px;
     font-size: 28px;
   }
   .color-trends-section .section-title {
     margin-bottom: 0;
+  }
+  .welcome-section .hero-title {
+    margin-bottom: 15px;
   }
   .news-section .main-article .title {
     font-size: 24px;
@@ -306,6 +314,19 @@
   }
 }
 @media (max-width: 1024px) {
+  .welcome-section .content-overlay {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    color: white;
+    z-index: 2;
+  }
+  .welcome-section .scroll-button {
+    bottom: 20px;
+  }
+  .welcome-section .hero-desc {
+    max-width: unset;
+  }
   .comments-section .comment-box img {
     width: 50px;
     height: 50px;
@@ -549,7 +570,8 @@
   .news-section .section-title,
   .comments-section .comment-box h2,
   .products-section .tab-buttons button,
-  .color-trends-section .section-title {
+  .color-trends-section .section-title,
+  .welcome-section .hero-title {
     font-size: 24px;
   }
   .gallery-section {

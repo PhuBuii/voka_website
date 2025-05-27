@@ -273,11 +273,15 @@ header {
 .welcome-section .content-overlay {
   position: absolute;
   bottom: 164px;
-  left: 13%;
+  width: 100%;
   color: white;
   z-index: 2;
 }
-
+.welcome-section .content-overlay .content-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
 .welcome-section .hero-title {
   color: #fff;
   font-family: Lora;
