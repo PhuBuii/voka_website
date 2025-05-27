@@ -1880,3 +1880,8 @@ header {
   color: #a94442;
   border-color: #a94442;
 }
+
+/*Event section*/
+.event-section {
+  padding: 79px 0 130px 0;
+}
