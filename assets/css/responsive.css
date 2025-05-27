@@ -735,6 +735,18 @@
   .recruitment-container .recruitment-item {
     width: 100%;
     gap: 10px;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .recruitment-container .recruitment-item .recruitment-content {
+    padding: 16px;
+  }
+  .recruitment-container .recruitment-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .recruitment-item .recruitment-image {
+    width: 100%;
   }
   .recruitment-content .recruitment-heading {
     font-size: 16px;
