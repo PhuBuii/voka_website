@@ -831,6 +831,12 @@ header {
   text-transform: uppercase;
   margin-bottom: 80px;
 }
+.news-section a {
+  display: block;
+}
+.news-section a.more {
+  display: unset;
+}
 .news-section .news-container {
   display: flex;
   gap: 40px;
@@ -863,6 +869,8 @@ header {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-decoration: none;
+  margin-bottom: 5px;
 }
 
 .news-section .main-article .desc {
@@ -917,6 +925,7 @@ header {
   font-weight: 600;
   line-height: normal;
   margin-bottom: 31px;
+  display: block;
 }
 
 .news-section .article-item a {
@@ -932,11 +941,11 @@ header {
   padding-bottom: 5px;
 }
 
-.news-section .article-item a:hover {
+.news-section .article-item a.more:hover {
   color: #ba171d;
 }
 
-.news-section .article-item a::after {
+.news-section .article-item a.more::after {
   content: "";
   position: absolute;
   left: 0;
