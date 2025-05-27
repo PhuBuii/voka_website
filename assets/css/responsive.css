@@ -97,6 +97,17 @@
   }
 }
 @media (max-width: 1200px) {
+  .footer-bottom .bottom {
+    display: flex;
+  }
+  .footer-bottom .top {
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+  .footer-bottom .top .copyright {
+    display: none;
+  }
   .technology-section .tech-description {
     flex: 0 0 40%;
     max-width: calc(40% - 27px);
