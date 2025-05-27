@@ -1696,3 +1696,94 @@ header {
   background: #a11518;
   cursor: pointer;
 }
+
+/*Recruitment section*/
+.recruitment-section {
+  padding: 79px 0 120px 0;
+}
+.recruitment-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+}
+.recruitment-container .recruitment-item {
+  width: calc(50% - 32px);
+
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.recruitment-item .recruitment-image {
+  width: 290px;
+  height: 206px;
+}
+.recruitment-item .recruitment-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.recruitment-content .date {
+  color: var(--grey, #555);
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+.recruitment-content .recruitment-heading {
+  color: var(--text, #201c1c);
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+.recruitment-content .num-recruitment {
+  color: var(--text, #201c1c);
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  display: block;
+  margin-bottom: 25px;
+}
+.recruitment-content a {
+  position: relative;
+  color: var(--text, #201c1c);
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.recruitment-content a.more::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 80%;
+  background: linear-gradient(95deg, #ba171d 6.84%, #c51a1d 93.16%);
+  transition: width 0.3s ease, background-position 0.3s ease;
+}
+.recruitment-content a:hover::after {
+  width: 110%;
+}
+
+.recruitment-content a:hover {
+  color: #a94442;
+  border-color: #a94442;
+}
