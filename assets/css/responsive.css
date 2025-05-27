@@ -530,6 +530,11 @@
   }
 }
 @media (max-width: 576px) {
+  .comments-section .comment-slider,
+  .comments-section .comment-box .user-comment {
+    max-width: 100%;
+    width: 100%;
+  }
   .heading-section {
     height: 200px;
   }
