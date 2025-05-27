@@ -40,7 +40,8 @@
   }
   .news-section,
   .comments-section,
-  .products-section {
+  .products-section,
+  .contact-section {
     padding: 60px 16px;
   }
   .technology-section {
@@ -94,6 +95,15 @@
   }
   .hotline-text {
     display: none;
+  }
+  .contact-container .contact-image {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  .contact-container .contact-form-container {
+    flex: 0 0 40%;
+    width: calc(40% - 200px);
   }
 }
 @media (max-width: 1200px) {
@@ -152,11 +162,15 @@
   .products-section .tab-buttons button,
   .color-trends-section .section-title,
   .welcome-section .hero-title,
-  .technology-section .tech-description h2 {
+  .technology-section .tech-description h2,
+  .contact-form-container .contact-heading,
+  .contact-form-container .contact-form h2 {
     margin-bottom: 40px;
     font-size: 28px;
   }
-  .technology-section .tech-description h2 {
+  .contact-form-container .contact-heading,
+  .technology-section .tech-description h2,
+  .contact-form-container .contact-form h2 {
     margin-bottom: 20px;
   }
   .color-trends-section .section-title {
@@ -174,7 +188,13 @@
   .news-section .article-item .date,
   .news-section .article-item a,
   .comments-section .comment-box .user-comment,
-  .products-section .tab-description {
+  .products-section .tab-description,
+  .contact-form-container p {
+    font-size: 16px;
+  }
+  .contact-form-container .contact-form button {
+    margin-top: 17px;
+
     font-size: 16px;
   }
   .comments-section .comment-box .user-comment {
@@ -377,6 +397,16 @@
   }
 }
 @media (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column;
+    max-width: 700px;
+  }
+  .contact-container .contact-image,
+  .contact-container .contact-form-container {
+    flex: 1;
+    width: 100%;
+  }
+
   .technology-section .tech-description,
   .technology-section .tech-slider-container {
     flex: 0 0 50%;
@@ -678,7 +708,9 @@
   .products-section .tab-buttons button,
   .color-trends-section .section-title,
   .welcome-section .hero-title,
-  .technology-section .tech-description h2 {
+  .technology-section .tech-description h2,
+  .contact-form-container .contact-heading,
+  .contact-form-container .contact-form h2 {
     font-size: 24px;
   }
 
