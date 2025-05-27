@@ -26,12 +26,16 @@
   }
 }
 @media (max-width: 1550px) {
-  .technology-section .tech-stats strong {
+  .stats-container {
+    padding: 0 16px;
+  }
+  .technology-section .tech-stats strong,
+  .stats-container .stats-item strong {
     font-size: 32px;
-
     margin-bottom: 6px;
   }
-  .technology-section .tech-stats span {
+  .technology-section .tech-stats span,
+  .stats-container .stats-item span {
     font-size: 18px;
   }
   .news-section,
@@ -44,8 +48,9 @@
   }
   .technology-section .tech-description p {
     font-size: 16px;
-
-    margin-bottom: 49px;
+  }
+  .technology-section .tech-stats {
+    margin-top: 49px;
   }
   .contact-form-section .form-overlay,
   .color-trends-section .section-title,
@@ -433,10 +438,15 @@
   }
 }
 @media (max-width: 876px) {
-  .technology-section .tech-stats span {
+  .stats-container .stats-item {
+    flex: 0 0 calc(50% - 10px);
+  }
+  .technology-section .tech-stats span,
+  .stats-container .stats-item span {
     font-size: 16px;
   }
-  .technology-section .tech-stats strong {
+  .technology-section .tech-stats strong,
+  .stats-container .stats-item strong {
     font-size: 28px;
   }
   .technology-section .tech-description {
@@ -473,6 +483,16 @@
   }
   .store-list-container h2 {
     margin-bottom: 24px;
+  }
+  .gallery-section,
+  .stats-section {
+    padding: 60px 0;
+  }
+  .stats-section {
+    padding-top: 0;
+  }
+  .technology-section .tech-description p {
+    max-height: unset;
   }
 }
 @media (max-width: 768px) {
@@ -623,11 +643,12 @@
   }
 }
 @media (max-width: 576px) {
-  .technology-section .tech-stats strong {
+  .technology-section .tech-stats strong,
+  .stats-container .stats-item strong {
     font-size: 24px;
   }
-  .technology-section .tech-description p {
-    margin-bottom: 20px;
+  .technology-section .tech-stats {
+    margin-top: 20px;
   }
   .comments-section .comment-slider,
   .comments-section .comment-box .user-comment {
@@ -649,9 +670,7 @@
   .technology-section .tech-description h2 {
     font-size: 24px;
   }
-  .gallery-section {
-    padding: 60px 0;
-  }
+
   header {
     top: 16px;
   }
@@ -720,7 +739,8 @@
   }
 }
 @media (max-width: 375px) {
-  .technology-section .tech-stats div {
+  .technology-section .tech-stats div,
+  .stats-container .stats-item {
     flex: 0 0 calc(100%);
     display: flex;
     flex-direction: column;

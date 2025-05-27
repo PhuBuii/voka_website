@@ -391,6 +391,7 @@ header {
   flex: 0 0 25%;
   max-width: calc(25% - 27px);
   padding: 0 16px;
+  height: fit-content;
 }
 .technology-section .tech-description h2 {
   color: var(--text, #201c1c);
@@ -411,9 +412,11 @@ header {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.18px;
-  margin-bottom: 98px;
+  max-height: 600px;
+  overflow: auto;
 }
 .technology-section .tech-stats {
+  margin-top: 98px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -425,7 +428,8 @@ header {
   flex-direction: column;
 }
 
-.technology-section .tech-stats strong {
+.technology-section .tech-stats strong,
+.stats-container .stats-item strong {
   color: var(--text, #201c1c);
   font-family: Lora;
   font-size: 52px;
@@ -436,7 +440,8 @@ header {
   margin-bottom: 12px;
 }
 
-.technology-section .tech-stats span {
+.technology-section .tech-stats span,
+.stats-container .stats-item span {
   color: var(--grey, #555);
   font-family: "Open Sans";
   font-size: 24px;
@@ -510,6 +515,24 @@ header {
   width: 100%;
   height: 100%;
 }
+/*Stats section*/
+.stats-section {
+  padding-bottom: 122px;
+}
+.stats-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stats-container .stats-item {
+  display: flex;
+  flex-direction: column;
+}
+
 /*Color trends section*/
 .color-trends-section {
   background: var(--red, #b61f22);
