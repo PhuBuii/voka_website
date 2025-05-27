@@ -1787,3 +1787,96 @@ header {
   color: #a94442;
   border-color: #a94442;
 }
+
+/*Service section*/
+.service-section {
+  padding: 63px 0 160px 0;
+}
+.service-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.service-item {
+  display: flex;
+  gap: 35px;
+}
+.service-image {
+  width: 35%;
+  height: 100%;
+  min-height: 270px;
+  aspect-ratio: 495/312;
+  border-radius: 8px;
+}
+.service-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.service-content {
+  width: 65%;
+}
+.service-content a {
+  position: relative;
+  color: var(--text, #201c1c);
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+.service-content .date {
+  color: var(--grey, #555);
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+.service-content .service-heading {
+  color: var(--text, #201c1c);
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+
+.service-content .service-desc {
+  color: var(--text, #201c1c);
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.36px;
+  display: block;
+  margin-bottom: 35px;
+}
+
+.service-content a.more::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 80%;
+  background: linear-gradient(95deg, #ba171d 6.84%, #c51a1d 93.16%);
+  transition: width 0.3s ease, background-position 0.3s ease;
+}
+.service-content a:hover::after {
+  width: 110%;
+}
+
+.service-content a:hover {
+  color: #a94442;
+  border-color: #a94442;
+}
