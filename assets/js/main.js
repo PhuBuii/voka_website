@@ -22,7 +22,7 @@ function scrollToContent() {
   }
 }
 const newProducts = new Swiper(".new-swiper", {
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 85,
   navigation: {
     nextEl: ".new-swiper .swiper-pagination-next",
@@ -37,7 +37,7 @@ const newProducts = new Swiper(".new-swiper", {
 });
 
 const popularProducts = new Swiper(".popular-swiper", {
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 85,
   navigation: {
     nextEl: ".popular-swiper .swiper-pagination-next",
@@ -72,15 +72,18 @@ tabButtons.forEach((btn) => {
   });
 });
 const gallerySwipper = new Swiper(".gallery-swiper", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 71,
   navigation: {
+    nextEl: ".gallery-section .swiper-pagination-next",
+    prevEl: ".gallery-section .swiper-pagination-prev",
     clickable: true,
   },
   breakpoints: {
-    1024: { slidesPerView: 3 },
-    768: { slidesPerView: 2 },
-    480: { slidesPerView: 1 },
+    1200: { slidesPerView: 3, spaceBetween: 71 },
+    1024: { slidesPerView: 2.5, spaceBetween: 51 },
+    768: { slidesPerView: 2, spaceBetween: 41 },
+    480: { slidesPerView: 1.5, spaceBetween: 21 },
   },
   loop: true,
 });

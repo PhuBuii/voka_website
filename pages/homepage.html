@@ -122,11 +122,10 @@
         </div>
       </div>
     </header>
-    <section class="welcome-section">
+    <!-- <section class="welcome-section">
       <div class="swiper welcome-Swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <!-- Wrapper chứa ảnh và overlay -->
             <div class="image-wrapper">
               <img
                 src="../assets/images/homepage-banner.png"
@@ -135,7 +134,6 @@
               <div class="image-overlay"></div>
             </div>
 
-            <!-- Nội dung chữ -->
             <div class="content-overlay">
               <h1 class="hero-title">
                 DẪN ĐẦU CÔNG NGHỆ SƠN – KIẾN TẠO KHÔNG GIAN SỐNG.
@@ -196,7 +194,6 @@
         </div>
       </div>
 
-      <!-- Scroll Button -->
       <button class="scroll-button" type="button" onclick="scrollToContent()">
         <img src="../assets/icons/arrow-down.svg" alt="arrow down icon" />
       </button>
@@ -284,7 +281,6 @@
         <button class="tab-btn" data-tab="popular">SẢN PHẨM BÁN CHẠY</button>
       </div>
 
-      <!-- Tab new products -->
       <div id="tab-new" class="tab-panel active">
         <div class="tab-description">
           VOKA AirCare là dòng sơn mới tích hợp công nghệ kháng khuẩn và khử
@@ -387,7 +383,6 @@
         </div>
       </div>
 
-      <!-- Tab popular product -->
       <div id="tab-popular" class="tab-panel">
         <div class="tab-description">
           Các dòng sơn bán chạy được người tiêu dùng tin chọn...
@@ -491,7 +486,6 @@
 
     <section class="comments-section">
       <div class="comment-container">
-        <!-- Hình ảnh -->
         <div class="image-box">
           <img src="../assets/images/customer-said.png" alt="Living Room" />
           <div class="circle-text">
@@ -502,7 +496,6 @@
           </div>
         </div>
 
-        <!-- Nội dung đánh giá -->
         <div class="comment-box">
           <h2>KHÁCH HÀNG NÓI GÌ ?</h2>
           <div class="comment-slider swiper">
@@ -548,7 +541,6 @@
               </div>
             </div>
 
-            <!-- Nút điều hướng -->
             <div class="nav-buttons">
               <div class="custom-button-prev">
                 <img src="../assets/icons/arrow-down.svg" alt="left arrow" />
@@ -565,7 +557,6 @@
     <section class="news-section">
       <h2 class="section-title">TIN TỨC – SỰ KIỆN</h2>
       <div class="news-container">
-        <!-- Bài viết nổi bật -->
         <div class="main-article">
           <img src="../assets/images/post/post_1.png" alt="featured" />
           <p class="date">01.01.2025</p>
@@ -582,7 +573,6 @@
           </p>
         </div>
 
-        <!-- Danh sách tin bên phải -->
         <div class="article-list">
           <div class="article-item">
             <img src="../assets/images/post/post_2.png" alt="thumb" />
@@ -619,7 +609,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="gallery-section">
       <h2>Hình ảnh hàng hóa</h2>
@@ -660,6 +650,14 @@
             </div>
           </div>
         </div>
+        <div class="custom-swiper-pagination">
+          <div class="swiper-pagination-prev">
+            <img src="../assets/icons/arrow-down.svg" alt="left arrow" />
+          </div>
+          <div class="swiper-pagination-next">
+            <img src="../assets/icons/arrow-down.svg" alt="right arrow" />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -691,7 +689,6 @@
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-content">
-          <!-- Trụ sở chính -->
           <div class="footer-col">
             <h4>TRỤ SỞ CHÍNH</h4>
             <div class="divide">
@@ -743,27 +740,34 @@
         </div>
 
         <div class="subscribe">
-          <img src="../assets/icons/mail.svg" alt="mail icon" />
-          <input type="email" placeholder="Nhập email của bạn" />
+          <div class="input-wrapper">
+            <input type="text" placeholder="Nhập email của bạn" />
+          </div>
           <button type="submit">Đăng ký</button>
         </div>
 
         <div class="footer-bottom">
           <div class="socials">
             <span>THEO DÕI CHÚNG TÔI</span>
-            <a href="#"
-              ><img src="../assets/icons/twitter.svg" alt="twitter icon"
-            /></a>
-            <a href="#"
-              ><img src="../assets/icons/facebook.svg" alt="facebook icon"
-            /></a>
-            <a href="#"
-              ><img src="../assets/icons/instargram.svg" alt="instargram icon"
-            /></a>
+            <div>
+              <a href="#"
+                ><img src="../assets/icons/twitter.svg" alt="twitter icon"
+              /></a>
+              <a href="#"
+                ><img src="../assets/icons/facebook.svg" alt="facebook icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../assets/icons/instargram.svg"
+                  alt="instargram icon"
+              /></a>
+            </div>
           </div>
-          <div class="copyright">@2025 VOKA. Design by PohaTech</div>
-          <div class="hotline">
-            DỊCH VỤ KHÁCH HÀNG: <strong>(084) 123 - 456 88</strong>
+          <div class="flex-reverse">
+            <div class="hotline">
+              DỊCH VỤ KHÁCH HÀNG: <strong>(084) 123 - 456 88</strong>
+            </div>
+            <div class="copyright">@2025 VOKA. Design by PohaTech</div>
           </div>
         </div>
       </div>
