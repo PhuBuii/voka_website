@@ -706,6 +706,7 @@ header {
   max-height: 715px;
   aspect-ratio: 1094/715;
   border-radius: 32px;
+  object-fit: cover;
 }
 @keyframes spin {
   0% {
