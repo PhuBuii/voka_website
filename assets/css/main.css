@@ -1266,6 +1266,7 @@ header {
 
 .footer-bottom {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -1275,6 +1276,18 @@ header {
   font-weight: 400;
   line-height: normal;
   margin-top: 73px;
+}
+.footer-bottom .top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-bottom .bottom {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .footer-bottom .socials {
   display: flex;

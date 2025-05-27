@@ -73,7 +73,7 @@
   .footer-bottom,
   .flex-reverse {
     flex-direction: column;
-    gap: 10px;
+    gap: 13px;
     width: 100%;
   }
   .heading-overlay {
@@ -224,6 +224,10 @@
   }
 }
 @media (max-width: 1024px) {
+  .footer-bottom .top {
+    flex-direction: column;
+    gap: 13px;
+  }
   .footer-content {
     gap: 24px;
   }
@@ -259,6 +263,11 @@
   }
 }
 @media (max-width: 768px) {
+  .footer-bottom .top,
+  .footer-bottom .bottom {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
   .gallery-section .swiper-container {
     width: 100%;
     position: relative;
