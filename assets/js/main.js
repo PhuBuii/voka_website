@@ -29,9 +29,13 @@ const newProducts = new Swiper(".new-swiper", {
     prevEl: ".new-swiper .swiper-pagination-prev",
   },
   breakpoints: {
-    1024: { slidesPerView: 4 },
-    768: { slidesPerView: 2 },
-    480: { slidesPerView: 1 },
+    1200: { slidesPerView: 4, spaceBetween: 85 },
+    1024: { slidesPerView: 3.5, spaceBetween: 75 },
+    876: { slidesPerView: 3, spaceBetween: 65 },
+    768: { slidesPerView: 2.5, spaceBetween: 55 },
+    576: { slidesPerView: 2, spaceBetween: 45 },
+    480: { slidesPerView: 1.5, spaceBetween: 35 },
+    375: { slidesPerView: 1, spaceBetween: 25 },
   },
   loop: true,
 });
@@ -44,9 +48,13 @@ const popularProducts = new Swiper(".popular-swiper", {
     prevEl: ".popular-swiper .swiper-pagination-prev",
   },
   breakpoints: {
-    1024: { slidesPerView: 4 },
-    768: { slidesPerView: 2 },
-    480: { slidesPerView: 1 },
+    1200: { slidesPerView: 4, spaceBetween: 85 },
+    1024: { slidesPerView: 3.5, spaceBetween: 75 },
+    876: { slidesPerView: 3, spaceBetween: 65 },
+    768: { slidesPerView: 2.5, spaceBetween: 55 },
+    576: { slidesPerView: 2, spaceBetween: 45 },
+    480: { slidesPerView: 1.5, spaceBetween: 35 },
+    375: { slidesPerView: 1, spaceBetween: 25 },
   },
   loop: true,
 });

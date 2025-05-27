@@ -12,7 +12,8 @@
 }
 @media (max-width: 1550px) {
   .news-section,
-  .comments-section {
+  .comments-section,
+  .products-section {
     padding: 60px 16px;
   }
   .contact-form-section .form-overlay {
@@ -33,6 +34,10 @@
   .store-list-container {
     padding: 16px;
   }
+  .products-section .swiper-container {
+    width: 90%;
+    margin-top: 45px;
+  }
 }
 @media (max-width: 1400px) {
   .store-container {
@@ -48,6 +53,9 @@
   }
 }
 @media (max-width: 1200px) {
+  .products-section .tab-buttons {
+    margin-bottom: 0;
+  }
   .comments-section .image-box {
     flex: 0 0 50%;
     max-width: 50%;
@@ -70,7 +78,8 @@
   }
   .gallery-section h2,
   .news-section .section-title,
-  .comments-section .comment-box h2 {
+  .comments-section .comment-box h2,
+  .products-section .tab-buttons button {
     margin-bottom: 40px;
     font-size: 28px;
   }
@@ -82,7 +91,8 @@
   .news-section .main-article .desc,
   .news-section .article-item .date,
   .news-section .article-item a,
-  .comments-section .comment-box .user-comment {
+  .comments-section .comment-box .user-comment,
+  .products-section .tab-description {
     font-size: 16px;
   }
   .comments-section .comment-box .user-comment {
@@ -499,7 +509,8 @@
   }
   .gallery-section h2,
   .news-section .section-title,
-  .comments-section .comment-box h2 {
+  .comments-section .comment-box h2,
+  .products-section .tab-buttons button {
     font-size: 24px;
   }
   .gallery-section {
@@ -557,6 +568,19 @@
   }
   .news-section .article-item {
     gap: 10px;
+  }
+  .products-section .tab-buttons button {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .products-section .tab-buttons {
+    gap: 20px;
+  }
+  .products-section .swiper-pagination-prev {
+    left: -30px;
+  }
+  .products-section .swiper-pagination-next {
+    left: 30px;
   }
 }
 @media (max-width: 375px) {
