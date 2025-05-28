@@ -38,6 +38,9 @@
   .stats-container .stats-item span {
     font-size: 18px;
   }
+  .product-detail-tabs {
+    margin-top: 60px;
+  }
   .news-section,
   .comments-section,
   .products-section,
@@ -46,8 +49,12 @@
   .service-section,
   .event-section,
   .detail-event-section,
-  .paint-section {
+  .paint-section,
+  .product-detail-section {
     padding: 60px 16px;
+  }
+  .tab-content {
+    padding-top: 30px;
   }
   .technology-section {
     padding: 60px 0;
@@ -112,6 +119,16 @@
   }
 }
 @media (max-width: 1200px) {
+  .product-detail-container .product-gallery {
+    width: calc(50% - 50px);
+  }
+  .product-detail-container .product-detail-content {
+    width: calc(50% - 50px);
+  }
+  .tab-buttons {
+    display: flex;
+    gap: 30px;
+  }
   .detail-event-container .event-post {
     width: 100%;
   }
@@ -423,6 +440,26 @@
   }
 }
 @media (max-width: 1024px) {
+  .product-detail-content .product-heading {
+    font-size: 24px;
+  }
+  .product-detail-container .product-detail-content,
+  .product-detail-container .tab-buttons {
+    gap: 20px;
+  }
+  .tab-buttons button {
+    font-size: 20px;
+  }
+  .product-detail-container .tab-buttons button {
+    font-size: 24px;
+  }
+
+  .product-detail-content .product-desc,
+  .product-detail-content .product-status,
+  .product-detail-container .tab-content {
+    font-size: 16px;
+    margin-top: 0px;
+  }
   .service-content .service-heading {
     font-size: 20px;
   }
@@ -521,6 +558,18 @@
   }
 }
 @media (max-width: 876px) {
+  .product-detail {
+    flex-direction: column;
+  }
+  .product-detail-container .product-detail {
+    display: flex;
+    gap: 20px;
+  }
+  .product-detail-container .product-gallery,
+  .product-detail-container .product-detail-content {
+    width: 100%;
+  }
+
   .service-content .service-heading,
   .event-content .event-heading {
     font-size: 18px;
@@ -659,6 +708,9 @@
   }
 }
 @media (max-width: 768px) {
+  .product-detail-container .tab-content {
+    padding-top: 20px;
+  }
   .comments-section .comment-box .author {
     margin-bottom: 20px;
   }
@@ -806,6 +858,9 @@
   }
 }
 @media (max-width: 576px) {
+  .product-gallery .thumbs-swiper {
+    display: none;
+  }
   .event-item .event-image {
     max-width: unset;
     height: 50%;
@@ -917,11 +972,7 @@
     font-size: 10px;
     line-height: 14px;
   }
-  .page-heading {
-    font-size: 16px;
-    line-height: 24px;
-    text-transform: uppercase;
-  }
+
   .footer .socials > div,
   .hotline strong {
     white-space: nowrap;
@@ -957,6 +1008,9 @@
   }
   .products-section .swiper-pagination-next {
     left: 30px;
+  }
+  .product-detail-container .main-swiper {
+    width: 100%;
   }
 }
 @media (max-width: 375px) {

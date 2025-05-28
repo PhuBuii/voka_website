@@ -88,7 +88,24 @@ function initSwipers() {
     loop: true,
     autoHeight: true,
   });
+
+  const thumbsSwiper = new Swiper(".thumbs-swiper", {
+    direction: "vertical",
+    slidesPerView: 4,
+    spaceBetween: 10,
+    watchSlidesProgress: true,
+    loop: true,
+  });
+
+  const mainSwiper = new Swiper(".main-swiper", {
+    loop: true,
+    spaceBetween: 10,
+    thumbs: {
+      swiper: thumbsSwiper,
+    },
+  });
 }
+
 function adjustPaginationBulletsWithPercentGap(gapPercent = 5) {
   const paginationContainer = document.querySelector(
     ".welcome-section .swiper-pagination"
@@ -161,5 +178,24 @@ function intiTabs() {
     });
 }
 
+function initDetailTabs() {
+  const tabButtons = document.querySelectorAll(".tab-buttons button");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  if (tabButtons && tabContents)
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-tab");
+
+        tabButtons.forEach((btn) => btn.classList.remove("active"));
+        tabContents.forEach((content) => content.classList.remove("active"));
+
+        button.classList.add("active");
+        document.getElementById(targetId).classList.add("active");
+      });
+    });
+}
 initSwipers();
 intiTabs();
+initDetailTabs();
+console.log("MainJS");

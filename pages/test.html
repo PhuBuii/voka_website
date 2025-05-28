@@ -3,122 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery Slideshow</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
+    <title>Tabs Chi Tiết Sản Phẩm</title>
     <style>
       body {
-        background: #f3f3f3;
         font-family: Arial, sans-serif;
+        background: #f9f9f9;
         padding: 40px;
+        color: #333;
+      }
+
+      .tabs {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .tab-buttons {
         display: flex;
-        justify-content: center;
+        border-bottom: 1px solid #ddd;
       }
 
-      .product-gallery {
-        display: flex;
-        gap: 20px;
-        align-items: flex-start;
-      }
-
-      .thumbs-swiper {
-        width: 80px;
-        height: 400px;
-      }
-
-      .thumbs-swiper .swiper-slide {
-        height: 80px;
-        border: 2px solid transparent;
-        opacity: 0.4;
+      .tab-buttons button {
+        flex: 1;
+        padding: 12px 16px;
+        background: none;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: #777;
+        border-bottom: 3px solid transparent;
         cursor: pointer;
         transition: all 0.3s ease;
       }
 
-      .thumbs-swiper .swiper-slide-thumb-active {
-        opacity: 1;
-        border-color: #b61f22;
+      .tab-buttons button.active {
+        color: #000;
+        border-bottom: 3px solid #b61f22;
       }
 
-      .thumbs-swiper img,
-      .main-swiper img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
+      .tab-content {
+        padding: 24px 0;
+        display: none;
       }
 
-      .main-swiper {
-        width: 320px;
-        height: 400px;
+      .tab-content.active {
+        display: block;
+      }
+
+      .tab-content ul {
+        padding-left: 20px;
+      }
+
+      .tab-content li {
+        margin-bottom: 8px;
       }
     </style>
   </head>
   <body>
-    <div class="product-gallery">
-      <!-- Thumbnail Swiper -->
-      <div class="swiper thumbs-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="https://via.placeholder.com/80x80?text=1" alt="Thumb 1" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://via.placeholder.com/80x80?text=2" alt="Thumb 2" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://via.placeholder.com/80x80?text=3" alt="Thumb 3" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://via.placeholder.com/80x80?text=4" alt="Thumb 4" />
-          </div>
-        </div>
+    <div class="tabs">
+      <!-- Tab Navigation -->
+      <div class="tab-buttons">
+        <button class="active" data-tab="tab1">Mô tả</button>
+        <button data-tab="tab2">Hướng dẫn thi công</button>
+        <button data-tab="tab3">Thông tin về an toàn và môi trường</button>
       </div>
 
-      <!-- Main Swiper -->
-      <div class="swiper main-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img
-              src="https://via.placeholder.com/320x400?text=Main+1"
-              alt="Main 1"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="https://via.placeholder.com/320x400?text=Main+2"
-              alt="Main 2"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="https://via.placeholder.com/320x400?text=Main+3"
-              alt="Main 3"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="https://via.placeholder.com/320x400?text=Main+4"
-              alt="Main 4"
-            />
-          </div>
-        </div>
+      <!-- Tab Content -->
+      <div class="tab-content active" id="tab1">
+        <p>
+          Sơn ngoại thất chống nóng mái tôn KOVA CN-05 là loại sơn hệ nước một
+          thành phần, được chế tạo từ chất tạo màng có khả năng chịu khí hậu
+          nóng bức, liên kết với phụ gia phản quang có cấu trúc tinh thể xếp
+          lớp, có khoảng trống bên trong, ngăn cản truyền nhiệt và phản xạ ánh
+          sáng...
+        </p>
+        <p><strong>ĐẶC TÍNH VƯỢT TRỘI:</strong></p>
+        <ul>
+          <li>Tạo thành lớp đồng nhất bám chắc lên bề mặt vật liệu.</li>
+          <li>
+            Chống nóng theo quy luật phản xạ ánh sáng và cách nhiệt đồng thời...
+          </li>
+          <li>
+            Chống rêu mốc, không gây ô nhiễm môi trường, bền màu, giảm âm thanh
+            trên mái tôn khi trời mưa to.
+          </li>
+          <li>Giúp tiết kiệm điện năng làm mát, giảm chi phí.</li>
+          <li>
+            Không cháy, không độc hại, an toàn với người thi công và sử dụng.
+          </li>
+        </ul>
+        <p>
+          Những bề mặt hay chịu ánh nắng mặt trời trực tiếp như mái tôn, tường
+          ngăn, bê tông, xi măng.
+        </p>
+      </div>
+
+      <div class="tab-content" id="tab2">
+        <p>
+          Hướng dẫn thi công sẽ được đặt tại đây. Ví dụ: chuẩn bị bề mặt, số lớp
+          sơn, thời gian khô, điều kiện thời tiết phù hợp để thi công,...
+        </p>
+      </div>
+
+      <div class="tab-content" id="tab3">
+        <p>
+          Thông tin về an toàn và môi trường như: không chứa VOC, thân thiện môi
+          trường, không gây kích ứng, xử lý khi đổ tràn, bảo quản, v.v.
+        </p>
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
-      const thumbsSwiper = new Swiper(".thumbs-swiper", {
-        direction: "vertical",
-        slidesPerView: 4,
-        spaceBetween: 10,
-        watchSlidesProgress: true,
-      });
+      const tabButtons = document.querySelectorAll(".tab-buttons button");
+      const tabContents = document.querySelectorAll(".tab-content");
 
-      const mainSwiper = new Swiper(".main-swiper", {
-        spaceBetween: 10,
-        thumbs: {
-          swiper: thumbsSwiper,
-        },
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const targetId = button.getAttribute("data-tab");
+
+          tabButtons.forEach((btn) => btn.classList.remove("active"));
+          tabContents.forEach((content) => content.classList.remove("active"));
+
+          button.classList.add("active");
+          document.getElementById(targetId).classList.add("active");
+        });
       });
     </script>
   </body>
