@@ -1,5 +1,5 @@
 function initSwipers() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // window.scrollTo({ top: 0, behavior: "smooth" });
   // Welcome Swiper (vertical)
   const welcomeSwiper = new Swiper(".welcome-Swiper", {
     direction: "vertical",

@@ -2,92 +2,124 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pagination</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Slideshow</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <style>
       body {
+        background: #f3f3f3;
         font-family: Arial, sans-serif;
-        background: #f5f5f5;
-        padding: 30px;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
       }
 
-      .pagination {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        font-size: 16px;
-        color: #222;
+      .product-gallery {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
       }
 
-      .pagination a,
-      .pagination span {
-        cursor: pointer;
-        user-select: none;
-        padding: 6px 12px;
-        border-radius: 4px;
-        text-decoration: none;
-        color: inherit;
-        border: none;
-        background: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-        transition: background-color 0.3s ease, color 0.3s ease;
+      .thumbs-swiper {
+        width: 80px;
+        height: 400px;
       }
 
-      /* Nút Trước và Sau */
-      .pagination .prev,
-      .pagination .next {
+      .thumbs-swiper .swiper-slide {
+        height: 80px;
         border: 2px solid transparent;
-        font-weight: 500;
-      }
-
-      .pagination .prev:hover,
-      .pagination .next:hover {
-        color: #d30000;
-      }
-
-      /* Các số trang */
-      .pagination .page-num {
-        padding: 6px 14px;
-        border-radius: 4px;
+        opacity: 0.4;
         cursor: pointer;
+        transition: all 0.3s ease;
       }
 
-      .pagination .page-num.active {
-        background-color: #d30000;
-        color: white;
-        font-weight: 600;
-        cursor: default;
+      .thumbs-swiper .swiper-slide-thumb-active {
+        opacity: 1;
+        border-color: #b61f22;
       }
 
-      /* Mũi tên */
-      .pagination svg {
-        width: 12px;
-        height: 12px;
-        fill: currentColor;
+      .thumbs-swiper img,
+      .main-swiper img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .main-swiper {
+        width: 320px;
+        height: 400px;
       }
     </style>
   </head>
   <body>
-    <div class="mc-pagination">
-      <nav class="navigation pagination" aria-label="Phân trang bài viết">
-        <h2 class="screen-reader-text">Phân trang bài viết</h2>
-        <div class="nav-links">
-          <a class="prev page-numbers" href="#"
-            ><img src="../assets/icons/arrow-left.svg" alt="left arrow" />
-            Trước</a
-          >
-          <a class="page-numbers" href="#">1</a>
-          <span aria-current="page" class="page-numbers current">2</span>
-          <a class="page-numbers" href="#">3</a>
-          <span class="page-numbers dots">…</span>
-          <a class="page-numbers" href="#">35</a>
-          <a class="next page-numbers" href="#"
-            >Sau<img src="../assets/icons/arrow-left.svg" alt="left arrow" />
-          </a>
+    <div class="product-gallery">
+      <!-- Thumbnail Swiper -->
+      <div class="swiper thumbs-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/80x80?text=1" alt="Thumb 1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/80x80?text=2" alt="Thumb 2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/80x80?text=3" alt="Thumb 3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/80x80?text=4" alt="Thumb 4" />
+          </div>
         </div>
-      </nav>
+      </div>
+
+      <!-- Main Swiper -->
+      <div class="swiper main-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://via.placeholder.com/320x400?text=Main+1"
+              alt="Main 1"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://via.placeholder.com/320x400?text=Main+2"
+              alt="Main 2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://via.placeholder.com/320x400?text=Main+3"
+              alt="Main 3"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://via.placeholder.com/320x400?text=Main+4"
+              alt="Main 4"
+            />
+          </div>
+        </div>
+      </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const thumbsSwiper = new Swiper(".thumbs-swiper", {
+        direction: "vertical",
+        slidesPerView: 4,
+        spaceBetween: 10,
+        watchSlidesProgress: true,
+      });
+
+      const mainSwiper = new Swiper(".main-swiper", {
+        spaceBetween: 10,
+        thumbs: {
+          swiper: thumbsSwiper,
+        },
+      });
+    </script>
   </body>
 </html>

@@ -44,7 +44,8 @@
   .contact-section,
   .recruitment-section,
   .service-section,
-  .event-section {
+  .event-section,
+  .detail-event-section {
     padding: 60px 16px;
   }
   .technology-section {
@@ -110,6 +111,19 @@
   }
 }
 @media (max-width: 1200px) {
+  .detail-event-container .event-post {
+    width: 100%;
+  }
+  .detail-event-container {
+    flex-direction: column;
+  }
+  .related-posts-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .related-posts-container .related-posts-item {
+    width: calc(50% - 20px);
+  }
   .footer-bottom .bottom {
     display: flex;
   }
@@ -510,6 +524,52 @@
   .event-content .event-heading {
     font-size: 18px;
   }
+  .related-posts-container {
+    flex-direction: column;
+  }
+  .related-posts-container .related-posts-item {
+    width: 100%;
+  }
+  .detail-event-container p,
+  .detail-event-container ul,
+  .detail-event-container ol {
+    font-size: 16px;
+  }
+  .detail-event-container h1,
+  .detail-event-container h2,
+  .detail-event-container h3,
+  .detail-event-container h4,
+  .detail-event-container h5,
+  .detail-event-container h6 {
+    margin-bottom: 14px;
+  }
+
+  .detail-event-container h1 {
+    font-size: 48px;
+  }
+
+  .detail-event-container h2 {
+    font-size: 36px;
+  }
+
+  .detail-event-container h3 {
+    font-size: 28px;
+  }
+
+  .detail-event-container h4 {
+    font-size: 20px;
+  }
+
+  .detail-event-container h5 {
+    font-size: 16px;
+  }
+
+  .detail-event-container h6 {
+    font-size: 14px;
+  }
+  .detail-event-container img {
+    margin: 14px 0;
+  }
   .service-image {
     width: 100%;
     height: 40%;
@@ -745,6 +805,11 @@
   }
 }
 @media (max-width: 576px) {
+  .event-item .event-image {
+    max-width: unset;
+    height: 50%;
+  }
+
   .pagination .page-numbers.prev,
   .pagination .page-numbers.next {
     position: relative;
@@ -784,8 +849,11 @@
   .recruitment-container .recruitment-item:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
-  .recruitment-item .recruitment-image {
+  .recruitment-item .recruitment-image,
+  .recruitment-item .recruitment-content {
     width: 100%;
+    height: 50%;
+    max-width: unset;
   }
   .recruitment-content .recruitment-heading {
     font-size: 16px;
