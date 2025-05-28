@@ -45,7 +45,8 @@
   .recruitment-section,
   .service-section,
   .event-section,
-  .detail-event-section {
+  .detail-event-section,
+  .paint-section {
     padding: 60px 16px;
   }
   .technology-section {
