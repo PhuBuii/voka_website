@@ -70,24 +70,24 @@
     </style>
   </head>
   <body>
-    <div class="pagination" aria-label="Pagination Navigation">
-      <a href="#" class="prev" aria-label="Trang trước">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M15 18l-6-6 6-6"></path>
-        </svg>
-        Trước
-      </a>
-
-      <span class="page-num active" aria-current="page">1</span>
-      <a href="#" class="page-num">2</a>
-      <a href="#" class="page-num">3</a>
-
-      <a href="#" class="next" aria-label="Trang sau">
-        Sau
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M9 6l6 6-6 6"></path>
-        </svg>
-      </a>
+    <div class="mc-pagination">
+      <nav class="navigation pagination" aria-label="Phân trang bài viết">
+        <h2 class="screen-reader-text">Phân trang bài viết</h2>
+        <div class="nav-links">
+          <a class="prev page-numbers" href="#"
+            ><img src="../assets/icons/arrow-left.svg" alt="left arrow" />
+            Trước</a
+          >
+          <a class="page-numbers" href="#">1</a>
+          <span aria-current="page" class="page-numbers current">2</span>
+          <a class="page-numbers" href="#">3</a>
+          <span class="page-numbers dots">…</span>
+          <a class="page-numbers" href="#">35</a>
+          <a class="next page-numbers" href="#"
+            >Sau<img src="../assets/icons/arrow-left.svg" alt="left arrow" />
+          </a>
+        </div>
+      </nav>
     </div>
   </body>
 </html>

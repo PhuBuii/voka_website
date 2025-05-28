@@ -43,7 +43,8 @@
   .products-section,
   .contact-section,
   .recruitment-section,
-  .service-section {
+  .service-section,
+  .event-section {
     padding: 60px 16px;
   }
   .technology-section {
@@ -197,7 +198,9 @@
   .recruitment-content a,
   .service-content .date,
   .service-content .service-desc,
-  .service-content a {
+  .service-content a,
+  .event-content .date,
+  .event-content .more {
     font-size: 16px;
   }
   .contact-form-container .contact-form button {
@@ -492,9 +495,19 @@
     height: 400px;
     aspect-ratio: unset;
   }
+  .event-container {
+    flex-direction: column;
+  }
+  .event-container .event-item {
+    width: 100%;
+  }
+  .pagination {
+    margin-top: 50px;
+  }
 }
 @media (max-width: 876px) {
-  .service-content .service-heading {
+  .service-content .service-heading,
+  .event-content .event-heading {
     font-size: 18px;
   }
   .service-image {
@@ -732,6 +745,32 @@
   }
 }
 @media (max-width: 576px) {
+  .pagination .page-numbers.prev,
+  .pagination .page-numbers.next {
+    position: relative;
+    text-indent: -9999px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+  }
+  .event-container .event-item {
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    gap: 0;
+  }
+  .event-container .event-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .event-item .event-image,
+  .event-item .event-content {
+    width: 100%;
+  }
+  .event-item .event-content {
+    padding: 16px;
+  }
   .recruitment-container .recruitment-item {
     width: 100%;
     gap: 10px;
@@ -852,6 +891,13 @@
   }
 }
 @media (max-width: 375px) {
+  .pagination .page-numbers,
+  .pagination .page-numbers.prev,
+  .pagination .page-numbers.next {
+    min-width: 30px;
+    height: 30px;
+  }
+
   .technology-section .tech-stats div,
   .stats-container .stats-item {
     flex: 0 0 calc(100%);
