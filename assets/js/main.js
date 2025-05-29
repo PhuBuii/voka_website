@@ -146,7 +146,6 @@ function adjustPaginationBulletsWithPercentGap(gapPercent = 5) {
   }
 }
 
-// Scroll to technology section
 function scrollToContent() {
   const techSection = document.getElementById("technology-section");
   if (techSection) {
