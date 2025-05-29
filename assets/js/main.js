@@ -195,6 +195,21 @@ function initDetailTabs() {
       });
     });
 }
+$(document).ready(function () {
+  $(".category-btn").on("click", function () {
+    $(".paint-menu").toggleClass("show");
+  });
+
+  // Nếu muốn ấn ra ngoài menu thì đóng lại
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest(".paint-menu, .category-btn").length) {
+      $(".paint-menu").removeClass("show");
+    }
+  });
+  $(".paint-menu #close-btn").on("click", function () {
+    $(".paint-menu").removeClass("show");
+  });
+});
 initSwipers();
 intiTabs();
 initDetailTabs();

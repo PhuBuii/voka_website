@@ -119,6 +119,9 @@
   }
 }
 @media (max-width: 1200px) {
+  .paint-menu .menu-heading {
+    font-size: 20px;
+  }
   .product-detail-container .product-gallery {
     width: calc(50% - 50px);
   }
@@ -553,8 +556,53 @@
   .event-container .event-item {
     width: 100%;
   }
-  .pagination {
+  .pagination,
+  .paint-section .pagination {
     margin-top: 50px;
+  }
+
+  .paint-container .paint-products {
+    flex: 1;
+    width: 100%;
+  }
+  .paint-container {
+    flex-direction: column;
+  }
+  .paint-container {
+    gap: 30px;
+  }
+  .paint-container .category-btn {
+    display: block;
+  }
+  .paint-container .paint-menu {
+    padding: 16px;
+    width: 100%;
+    max-width: fit-content;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .paint-container .paint-menu.show {
+    transform: translateX(0);
+  }
+  .paint-products-container .product-card p {
+    font-size: 16px;
+  }
+  .paint-products-container .product-card button {
+    padding: 5px;
+    font-size: 16px;
+  }
+  .paint-products-container .product-card {
+    gap: 10px;
+  }
+  .paint-menu .menu-option a {
+    font-size: 16px;
   }
 }
 @media (max-width: 876px) {
@@ -708,6 +756,10 @@
   }
 }
 @media (max-width: 768px) {
+  .paint-products-container .product-card p,
+  .paint-products-container .product-card button {
+    font-size: 14px;
+  }
   .product-detail-container .tab-content {
     padding-top: 20px;
   }
@@ -858,6 +910,14 @@
   }
 }
 @media (max-width: 576px) {
+  .paint-products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .paint-products-container .product-card {
+    width: calc(50% - 20px);
+  }
   .product-gallery .thumbs-swiper {
     display: none;
   }
@@ -1014,6 +1074,37 @@
   }
 }
 @media (max-width: 375px) {
+  .paint-container #close-btn {
+    display: block;
+    position: relative;
+    left: calc(100% - 16px);
+    background: none;
+    border: none;
+    margin-bottom: 16px;
+  }
+  .paint-container .paint-menu {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    padding: 24px 16px;
+    background-color: #ffffff;
+    z-index: 9999;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .paint-products-container {
+    gap: 10px;
+  }
+  .paint-products-container .product-card {
+    width: 100%;
+  }
   .pagination .page-numbers,
   .pagination .page-numbers.prev,
   .pagination .page-numbers.next {

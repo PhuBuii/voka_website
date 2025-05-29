@@ -2281,6 +2281,7 @@ header {
 
 .paint-section {
   padding: 96px 0 160px 0;
+  position: relative;
 }
 .paint-container {
   max-width: 1400px;
@@ -2288,10 +2289,26 @@ header {
   display: flex;
   gap: 60px;
 }
+.paint-container #close-btn {
+  display: none;
+}
+.paint-container .category-btn {
+  display: none;
+  background: var(
+    --radian-red,
+    linear-gradient(95deg, #ba171d 6.84%, #c51a1d 93.16%)
+  );
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 8px;
+}
 .paint-container .paint-menu {
   flex: 0 0 25%;
   width: 25%;
 }
+
 .paint-container .paint-products {
   flex: 0 0 70%;
   width: calc(75% - 60px);
@@ -2487,6 +2504,9 @@ header {
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
+}
+.product-detail-container .tab-buttons button:hover {
+  color: rgba(32, 28, 28, 1);
 }
 
 .product-detail-container .tab-buttons button.active {
