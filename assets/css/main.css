@@ -2304,6 +2304,9 @@ header {
   border-radius: 8px;
   padding: 8px;
 }
+.paint-container .category-btn:hover {
+  background: #851113;
+}
 .paint-container .paint-menu {
   flex: 0 0 25%;
   width: 25%;
