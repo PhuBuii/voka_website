@@ -19,7 +19,12 @@ function initSwipers() {
         adjustPaginationBulletsWithPercentGap(5);
       },
       slideChangeTransitionEnd: function () {
+        const swiper = this;
         adjustPaginationBulletsWithPercentGap(5);
+
+        if (swiper.isEnd) {
+          scrollToContent();
+        }
       },
     },
   });
