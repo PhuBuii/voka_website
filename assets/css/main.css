@@ -257,6 +257,7 @@ header {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  scroll-snap-align: start;
 }
 
 .welcome-section .swiper,
@@ -385,11 +386,13 @@ header {
 .welcome-section .scroll-button:hover {
   background-color: #374151;
 }
+
 /*Technology section*/
 .technology-section {
   padding: 160px 0;
   width: 100%;
   overflow-x: hidden;
+  scroll-snap-align: start;
 }
 .technology-section .tech-container {
   width: 100%;
